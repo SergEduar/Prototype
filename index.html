@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AR</title>
+  <link rel="stylesheet" href="Test.css">
+  <script src="Test.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>AmazoniansRates</h1>
+    <div id="meta-container">
+      <label for="meta-input">Meta:</label>
+      <input type="number" id="meta-input" class="input-field" min="0" step="0.01">
+      <button onclick="cambiarMeta()">Guardar</button>
+    </div>
+    <div id="inputs-container">
+      <h3>Amazonians Competition Rate:</h3>
+      <ol id="data-list">
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+        <li><input type="number" class="input-field" min="0" step="0.01"></li>
+      </ol>
+    </div>
+    <button onclick="calcularPromedio()">Calcular Promedio</button>
+    <div id="resultado" class="result"></div>
+  </div>
+</body>
+</html>
+
