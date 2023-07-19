@@ -29,15 +29,18 @@ function calcularPromedio() {
 
   if (numeros.length > 0) {
     var promedioCalculado = calcularPromedioFromArray(numeros);
-    var mensaje = "El promedio de los datos ingresados es: " + promedioCalculado.toFixed(2);
+    var mensaje = "Total People Average: " + promedioCalculado.toFixed(2);
     if (promedioCalculado >= meta) {
-      mensaje += " (Has alcanzado la meta)";
+      mensaje += " (Yes, you have reached the goal.)";
+      document.getElementById("resultado").style.backgroundColor = "green";
     } else {
-      mensaje += " (No has alcanzado la meta)";
+      mensaje += " (You have not reached the goal.)";
+      document.getElementById("resultado").style.backgroundColor = "red";
     }
     document.getElementById("resultado").innerHTML = mensaje;
   } else {
     document.getElementById("resultado").innerHTML = "Ingrese al menos un número válido.";
+    document.getElementById("resultado").style.backgroundColor = "transparent";
   }
 }
 
@@ -49,6 +52,5 @@ function calcularPromedioFromArray(numeros) {
   var promedio = suma / numeros.length;
   return promedio;
 }
-
 
 mostrarMeta(); // Mostrar la meta inicial al cargar la página
